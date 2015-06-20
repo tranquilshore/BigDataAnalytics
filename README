@@ -1,0 +1,11 @@
+Big Data:
+
+A map-reduce application that can tell the popularity of any application among users running on servers by comparing their percentage CPU usage on that server using the data collected for a particular interval of time.
+
+Use "top -b -> filename.txt" to extract the processes resource utilization information to a file (demo_input_file.txt).
+
+
+Requirements:
+1. Hadoop
+2. Eclipse
+3. Java
