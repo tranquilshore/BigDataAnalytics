@@ -8,9 +8,11 @@ import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 
 public class MostUsedAppMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, DoubleWritable>{
-	public void map(LongWritable key, Text value, OutputCollector<Text, DoubleWritable> output, Reporter reporter) throws IOException{
+	public void map(LongWritable key, Text value, OutputCollector<Text, DoubleWritable> output, Reporter reporter)
+	throws IOException{
 		String strline = value.toString();
-		if((!(strline.isEmpty()) && (strline.length()>68 && strline.charAt(48)!='%')) && (strline.charAt(45)=='S'|| strline.charAt(45)=='R')){
+		if((!(strline.isEmpty()) && (strline.length()>68 && strline.charAt(48)!='%'))
+		&& (strline.charAt(45)=='S'|| strline.charAt(45)=='R')){
 			int len =  strline.length();
 			String appname = strline.substring(68, len);
 			int i=46;
